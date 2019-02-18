@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Hello World</h1>
+    <AdDialog ref="adDialog"></AdDialog>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import {EventBus} from "@/event-bus";
+import AdDialog from "@/components/dialog/ad-dialog";
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  name: 'app'
+  , components: {
+    AdDialog
+    // HelloWorld
+  }
+  , mounted() {
+    this.$refs.adDialog.init();
+    // this.$dlg.modal(AdDialog, {
+    //   width: 350
+    //   , height: 450
+    //   , callback: data=>{
+    //
+    //   }
+    // })
   }
 }
 </script>
