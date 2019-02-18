@@ -7,7 +7,7 @@
 
 <script>
 import {EventBus} from "@/event-bus";
-import AdDialog from "@/components/dialog/ad-dialog";
+import AdDialog from "@/components/popup/ad-dialog";
 
 export default {
   name: 'app'
