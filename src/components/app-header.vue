@@ -37,9 +37,11 @@
         font-size: 30px;
         text-align: center;
         overflow: hidden;
-        img {
-            width: 100%;
-            height: 100%;
-        }
     }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
 </style>

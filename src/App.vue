@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Hello World</h1>
+    <h1>中国最好的VUE</h1>
     <AdDialog ref="adDialog"></AdDialog>
     <AppHeader ref="appHeader"></AppHeader>
   </div>

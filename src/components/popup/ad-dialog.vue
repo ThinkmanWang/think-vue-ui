@@ -67,16 +67,18 @@
         }
     }
 </script>
-.slider {
-    height: 188px;
-    font-size: 30px;
-    text-align: center;
-    overflow: hidden;
-    img {
-    width: 100%;
-    height: 100%;
-    }
-}
+
 <style scoped>
+    .slider {
+        height: 188px;
+        font-size: 30px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 
 </style>
