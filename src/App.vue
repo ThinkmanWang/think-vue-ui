@@ -2,28 +2,24 @@
   <div id="app">
     <h1>Hello World</h1>
     <AdDialog ref="adDialog"></AdDialog>
+    <AppHeader ref="appHeader"></AppHeader>
   </div>
 </template>
 
 <script>
 import {EventBus} from "@/event-bus";
 import AdDialog from "@/components/popup/ad-dialog";
+import AppHeader from "@/components/app-header";
 
 export default {
   name: 'app'
   , components: {
+    AppHeader,
     AdDialog
     // HelloWorld
   }
   , mounted() {
     this.$refs.adDialog.init();
-    // this.$dlg.modal(AdDialog, {
-    //   width: 350
-    //   , height: 450
-    //   , callback: data=>{
-    //
-    //   }
-    // })
   }
 }
 </script>
