@@ -18,9 +18,6 @@ export default {
     AdDialog
     // HelloWorld
   }
-  , mounted() {
-    this.$refs.adDialog.init();
-  }
 }
 </script>
 

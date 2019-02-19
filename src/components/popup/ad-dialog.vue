@@ -4,7 +4,7 @@
         <mt-popup
                 id="ad-popup"
                 style="width: 50vmin; height: 50vmin; background-color: transparent"
-                v-model="bVisible"
+                v-model="showPopup"
                 :modal=true
                 position="center">
 
@@ -30,10 +30,16 @@
 
     export default {
         name: "AdDialog"
+        , props: {
+            showPopup: {
+                type: Boolean
+                , default: true
+            }
+        }
         , data() {
             return {
-                bVisible:false
-                , swipeData: [
+                // bVisible:false
+                swipeData: [
                     {
                         pic: require('./img/jd2019.jpeg'),
                         link: 'https://u.jd.com/gvrmwX',
@@ -49,10 +55,10 @@
         }
         , methods: {
           show() {
-            this.bVisible = true;
+            this.showPopup = true;
           }
           , dismiss() {
-              this.bVisible = false;
+              this.showPopup = false;
           }
           , init() {
               // init ad items from server and show if list is not null
