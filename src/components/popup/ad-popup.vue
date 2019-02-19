@@ -31,27 +31,11 @@
     export default {
         name: "AdPopup"
         , props: {
-            // showPopup: {
-            //     type: Boolean
-            //     , default: true
-            // }
         }
         , data() {
             return {
                 showPopup: false
-
-                // bVisible:false
                 , swipeData: [
-                    //   {
-                    //       pic: 'https://www.baidu.com/img/xinshouye_587b8961411e2b7405bfa4e20c143faa.png',
-                    //       link: 'https://u.jd.com/gvrmwX',
-                    //       key: 'jd年货节'
-                    //   },
-                    //   {
-                    //       pic: 'https://www.baidu.com/img/xinshouye_587b8961411e2b7405bfa4e20c143faa.png',
-                    //       link: 'https://u.jd.com/gvrmwX',
-                    //       key: 'taobao特卖'
-                    //   }
                 ]
             };
         }
@@ -99,8 +83,7 @@
 
         }
         , mounted() {
-            // console.log("FXXK HAHAHA")
-            // this.init();
+            console.log("FXXK HAHAHA")
         }
     }
 </script>

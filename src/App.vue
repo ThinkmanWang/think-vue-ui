@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!--<h1>中国最好的UI</h1>-->
     <mt-header id="app-header" v-bind:title="selected">
       <router-link to="/" slot="left">
         <mt-button icon="back"></mt-button>
@@ -27,7 +26,7 @@
         <mt-tab-item id="首页">
           <!--<img src="components/img/close-circle-white-64.png"></mt-tab-item>-->
           <img slot="icon" src="./components/img/close-circle-white-64.png" />
-          外卖
+          首页
         </mt-tab-item>
         <mt-tab-item id="发现">
           <img slot="icon" src="./components/img/close-circle-white-64.png" />
@@ -45,7 +44,6 @@
 <script>
 import {EventBus} from "@/event-bus";
 import AdPopup from "@/components/popup/ad-popup";
-import AppBanner from "@/components/app-banner";
 import IndexPage from "@/components/index/index";
 import DiscoverPage from "@/components/discover/discover";
 import MinePage from "@/components/mine/mine";
@@ -61,7 +59,6 @@ export default {
     MinePage,
     DiscoverPage,
     IndexPage,
-    AppBanner,
     AdPopup
     // HelloWorld
   }
@@ -69,6 +66,7 @@ export default {
 
   }
   , mounted() {
+
     var aryData = [
       {
           pic: 'https://www.baidu.com/img/xinshouye_587b8961411e2b7405bfa4e20c143faa.png',
@@ -91,7 +89,7 @@ export default {
 
 <style>
 #app-header {
-  height: 48px;
+  /*height: 48px;*/
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
