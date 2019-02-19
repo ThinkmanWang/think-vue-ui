@@ -4,7 +4,6 @@
                 v-model="bVisible"
                 position="center"
                 :modal=false>
-            <h3>HEHEHEHEHEHEHEHEHEHE</h3> <br/>
             <div class="slider">
                 <mt-swipe :auto="3500">
                     <mt-swipe-item v-for="item in swipeData" :key="item.pic">
