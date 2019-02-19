@@ -1,9 +1,10 @@
 <template>
-    <div id="AdDialog">
+    <div id="AdDialog" class="AdDialog">
         <mt-popup
                 v-model="bVisible"
+                :modal=false
                 position="center">
-            <div class="slider">
+            <div class="slider" >
                 <mt-swipe :auto="3500">
                     <mt-swipe-item v-for="item in swipeData" :key="item.pic">
                         <img :src="item.pic" @click="toAdEvent(item)">
@@ -12,7 +13,7 @@
             </div>
 
             <!--<br />-->
-            <img src="./img/close-circle.png" height="10%" width="10%" v-on:click="dismiss" />
+            <img id="btnClose" src="./img/close-circle.png" v-on:click="dismiss" />
 
         </mt-popup>
     </div>
@@ -67,11 +68,30 @@
 </script>
 
 <style scoped>
+    .AdDialog {
+        background-color:rgba(255,255,255,0);
+    }
+
+    mt-popup{
+        background-color:rgba(255,255,255,0);
+    }
+
     .slider {
         height: 188px;
+        width: 100%;
+
         font-size: 30px;
         text-align: center;
         overflow: hidden;
+        /*border-radius: 8px;*/
+        background-color:rgba(255,255,255,0);
+        /*padding: 10px;*/
+        /*transform: translate(-50%, 0);*/
+
+        /*filter:alpha(Opacity=60);*/
+        /*-moz-opacity:0.6;*/
+        /*opacity: 0.6;*/
+        margin-bottom: 100px;
     }
 
     img {
@@ -79,4 +99,22 @@
         height: 100%;
     }
 
+    /*.AdDialog {*/
+        /*filter:alpha(Opacity=60);*/
+        /*-moz-opacity:0.6;*/
+        /*opacity: 0.6;*/
+    /*}*/
 </style>
+
+<!--<style scoped lang="sass">-->
+    <!--.slider {-->
+        <!--height: 188px;-->
+        <!--font-size: 30px;-->
+        <!--text-align: center;-->
+        <!--overflow: hidden;-->
+        <!--img {-->
+            <!--width: 100%;-->
+            <!--height: 100%;-->
+        <!--}-->
+    <!--}-->
+<!--</style>-->
