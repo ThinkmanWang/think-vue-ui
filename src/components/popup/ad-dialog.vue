@@ -2,8 +2,7 @@
     <div id="AdDialog">
         <mt-popup
                 v-model="bVisible"
-                position="center"
-                :modal=false>
+                position="center">
             <div class="slider">
                 <mt-swipe :auto="3500">
                     <mt-swipe-item v-for="item in swipeData" :key="item.pic">
