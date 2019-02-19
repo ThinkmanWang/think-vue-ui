@@ -4,7 +4,7 @@
     <mt-header id="app-header" v-bind:title="selected">
       <router-link to="/" slot="left">
         <mt-button icon="back"></mt-button>
-        <mt-button @click="handleClose">关闭</mt-button>
+        <mt-button >关闭</mt-button>
       </router-link>
       <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
@@ -25,15 +25,16 @@
     <div class="page-tabbar">
       <mt-tabbar v-model="selected" fixed>
         <mt-tab-item id="首页">
-          <img slot="icon" src="components/img/close-circle-white-64.png">
+          <!--<img src="components/img/close-circle-white-64.png"></mt-tab-item>-->
+          <img slot="icon" src="./components/img/close-circle-white-64.png" />
           外卖
         </mt-tab-item>
         <mt-tab-item id="发现">
-          <img slot="icon" src="components/img/close-circle-white-64.png">
+          <img slot="icon" src="./components/img/close-circle-white-64.png" />
           发现
         </mt-tab-item>
         <mt-tab-item id="我的">
-          <img slot="icon" src="components/img/close-circle-white-64.png">
+          <img slot="icon" src="./components/img/close-circle-white-64.png" />
           我的
         </mt-tab-item>
       </mt-tabbar>
