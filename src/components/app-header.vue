@@ -34,7 +34,7 @@
 <style scoped>
     .slider {
         height: 188px;
-        font-size: 30px;
+        /*font-size: 30px;*/
         text-align: center;
         overflow: hidden;
     }
