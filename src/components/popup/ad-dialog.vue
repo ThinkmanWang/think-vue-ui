@@ -1,13 +1,15 @@
 <template>
     <div id="AdDialog" class="AdDialog">
+
         <mt-popup
+                style="width: 100%"
                 v-model="bVisible"
                 :modal=false
                 position="center">
 
             <div>
                 <div class="slider" >
-                    <mt-swipe :auto="3500">
+                    <mt-swipe :auto="3500" >
                         <mt-swipe-item v-for="item in swipeData" :key="item.pic">
                             <img :src="item.pic" v-on:click="toAdEvent(item)">
                         </mt-swipe-item>
@@ -15,7 +17,7 @@
                 </div>
 
                 <!--<br />-->
-                <h2>fxxkfxxkfxxkfxxkfxxkfxxk</h2>
+                <!--<h2>fxxf</h2>-->
                 <img id="btnClose" src="./img/close-circle.png" v-on:click="dismiss" />
             </div>
         </mt-popup>
@@ -94,17 +96,22 @@
         /*}*/
 
     /*}*/
-
+.AdDialog {
+    /*width: 300px;*/
+    margin: 16px;
     .slider {
+        width: 100%;
         height: 188px;
         font-size: 30px;
         text-align: center;
         overflow: hidden;
         margin-bottom: 32px;
+
         img {
             width: 100%;
             height: 100%;
         }
     }
+}
 
 </style>
