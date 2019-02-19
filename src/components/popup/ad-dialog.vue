@@ -3,7 +3,7 @@
 
         <mt-popup
                 id="ad-popup"
-                style="width: 60%; background-color: transparent"
+                style="width: 60vmin; height: 60vmin; background-color: transparent"
                 v-model="bVisible"
                 :modal=true
                 position="center">
@@ -19,7 +19,7 @@
 
                 <!--<br />-->
                 <!--<h2>fxxf</h2>-->
-                <img id="btnClose" src="./img/close-circle.png" v-on:click="dismiss" />
+                <img id="btnClose" src="./img/close-circle-white-64.png" v-on:click="dismiss" style="width: 6vmin; height: 6vmin" />
             </div>
         </mt-popup>
     </div>
@@ -79,35 +79,17 @@
 </script>
 
 <style scoped lang="scss">
-    /*.AdDialog {*/
-        /*!*width: 100%;*!*/
-        /*mt-popup {*/
-            /*!*width: 100%;*!*/
-            /*!*height: 188px;*!*/
-            /*.slider {*/
-                /*height: 188px;*/
-                /*font-size: 30px;*/
-                /*text-align: center;*/
-                /*overflow: hidden;*/
-                /*img {*/
-                    /*width: 100%;*/
-                    /*height: 100%;*/
-                /*}*/
-            /*}*/
-        /*}*/
-
-    /*}*/
 .AdDialog {
     /*width: 300px;*/
     /*margin-top: 100px;*/
 
     .slider {
         width: 100%;
-        height: 188px;
+        height: 20vh;
         font-size: 30px;
         text-align: center;
         overflow: hidden;
-        margin-bottom: 32px;
+        margin-bottom: 10vmin;
 
         img {
             width: 100%;
