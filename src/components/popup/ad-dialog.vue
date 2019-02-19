@@ -3,7 +3,7 @@
 
         <mt-popup
                 id="ad-popup"
-                style="width: 60vmin; height: 60vmin; background-color: transparent"
+                style="width: 50vmin; height: 50vmin; background-color: transparent"
                 v-model="bVisible"
                 :modal=true
                 position="center">
@@ -79,17 +79,35 @@
 </script>
 
 <style scoped lang="scss">
+    /*.AdDialog {*/
+        /*!*width: 100%;*!*/
+        /*mt-popup {*/
+            /*!*width: 100%;*!*/
+            /*!*height: 188px;*!*/
+            /*.slider {*/
+                /*height: 188px;*/
+                /*font-size: 30px;*/
+                /*text-align: center;*/
+                /*overflow: hidden;*/
+                /*img {*/
+                    /*width: 100%;*/
+                    /*height: 100%;*/
+                /*}*/
+            /*}*/
+        /*}*/
+
+    /*}*/
 .AdDialog {
     /*width: 300px;*/
     /*margin-top: 100px;*/
 
     .slider {
-        width: 100%;
-        height: 20vh;
-        font-size: 30px;
+        width: 50vmin;
+        height: 50vmin;
+        /*font-size: 30px;*/
         text-align: center;
         overflow: hidden;
-        margin-bottom: 10vmin;
+        margin-bottom: 8vmin;
 
         img {
             width: 100%;
