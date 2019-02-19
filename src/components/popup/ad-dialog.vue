@@ -2,9 +2,10 @@
     <div id="AdDialog" class="AdDialog">
 
         <mt-popup
-                style="width: 100%"
+                id="ad-popup"
+                style="width: 60%; background-color: transparent"
                 v-model="bVisible"
-                :modal=false
+                :modal=true
                 position="center">
 
             <div>
@@ -98,7 +99,8 @@
     /*}*/
 .AdDialog {
     /*width: 300px;*/
-    margin: 16px;
+    /*margin-top: 100px;*/
+
     .slider {
         width: 100%;
         height: 188px;
