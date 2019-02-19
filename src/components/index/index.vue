@@ -1,10 +1,13 @@
 <template>
-    <h1>首页</h1>
+    <AppBanner ref="appHeader"></AppBanner>
 </template>
 
 <script>
+    import AppBanner from "@/components/app-banner";
+
     export default {
-        name: "index"
+        name: "IndexPage",
+        components: {AppBanner}
     }
 </script>
 

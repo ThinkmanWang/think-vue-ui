@@ -28,6 +28,23 @@
                 ]
             };
         }
+        , methods: {
+            toAdEvent (item) {
+
+                if (typeof this._hmt !== 'undefined') {
+                    this._hmt.push(['_trackEvent', 'banner', 'click', item.key, '-'])
+                }
+
+                // $.report('banner', item.key, 'click', item.key)
+                let linkBase = btoa(unescape(encodeURIComponent(item.link)))
+                if (item.link.startsWith('http')) {
+                    // window.open(item.link);
+                    location.href = item.link
+                } else {
+                    location.href = this.ADDRESS + '/html/openDeepLink?urlBase=' + linkBase
+                }
+            }
+        }
     }
 </script>
 

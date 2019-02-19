@@ -9,18 +9,16 @@
       <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
     <AdPopup ref="adPopup"></AdPopup>
-    <!--<AppBanner ref="appHeader"></AppBanner>-->
-
-    <!--<div>-->
-      <!--<mt-cell class="page-part" title="当前选中" :value="selected" />-->
-    <!--</div>-->
 
     <mt-tab-container class="page-tabbar-container" v-model="selected">
       <mt-tab-container-item id="首页">
+        <IndexPage></IndexPage>
       </mt-tab-container-item>
       <mt-tab-container-item id="发现">
+        <DiscoverPage></DiscoverPage>
       </mt-tab-container-item>
       <mt-tab-container-item id="我的">
+        <MinePage></MinePage>
       </mt-tab-container-item>
     </mt-tab-container>
 
@@ -47,6 +45,9 @@
 import {EventBus} from "@/event-bus";
 import AdPopup from "@/components/popup/ad-popup";
 import AppBanner from "@/components/app-banner";
+import IndexPage from "@/components/index/index";
+import DiscoverPage from "@/components/discover/discover";
+import MinePage from "@/components/mine/mine";
 
 export default {
   name: 'app'
@@ -56,6 +57,9 @@ export default {
     };
   }
   , components: {
+    MinePage,
+    DiscoverPage,
+    IndexPage,
     AppBanner,
     AdPopup
     // HelloWorld
