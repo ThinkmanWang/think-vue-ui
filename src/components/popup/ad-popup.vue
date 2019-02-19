@@ -29,27 +29,29 @@
     // import { Swipe, SwipeItem } from 'mint-ui';
 
     export default {
-        name: "AdDialog"
+        name: "AdPopup"
         , props: {
-            showPopup: {
-                type: Boolean
-                , default: true
-            }
+            // showPopup: {
+            //     type: Boolean
+            //     , default: true
+            // }
         }
         , data() {
             return {
+                showPopup: false
+
                 // bVisible:false
-                swipeData: [
-                    {
-                        pic: require('./img/jd2019.jpeg'),
-                        link: 'https://u.jd.com/gvrmwX',
-                        key: 'jd年货节'
-                    },
-                    {
-                        pic: require('./img/taobao.jpg'),
-                        link: 'https://u.jd.com/gvrmwX',
-                        key: 'taobao特卖'
-                    }
+                , swipeData: [
+                    //   {
+                    //       pic: 'https://www.baidu.com/img/xinshouye_587b8961411e2b7405bfa4e20c143faa.png',
+                    //       link: 'https://u.jd.com/gvrmwX',
+                    //       key: 'jd年货节'
+                    //   },
+                    //   {
+                    //       pic: 'https://www.baidu.com/img/xinshouye_587b8961411e2b7405bfa4e20c143faa.png',
+                    //       link: 'https://u.jd.com/gvrmwX',
+                    //       key: 'taobao特卖'
+                    //   }
                 ]
             };
         }
@@ -58,11 +60,25 @@
             this.showPopup = true;
           }
           , dismiss() {
+              // console.log("FXXK02");
               this.showPopup = false;
           }
-          , init() {
+          , initData(aryData) {
               // init ad items from server and show if list is not null
-              this.show();
+              this.showPopup = false;
+
+              if (null == aryData || aryData.length <= 0) {
+                  this.swipeData = [];
+                  return;
+              }
+
+              console.log("swipeData length => " + this.swipeData.length);
+              this.swipeData = aryData;
+              if (this.swipeData.length > 0) {
+                this.show();
+              } else {
+                  console.log("swipeData length <= 0 do not show popup");
+              }
           }
           , toAdEvent (item) {
               this.dismiss();
@@ -79,7 +95,12 @@
               } else {
                   location.href = this.ADDRESS + '/html/openDeepLink?urlBase=' + linkBase
               }
-            }
+          }
+
+        }
+        , mounted() {
+            // console.log("FXXK HAHAHA")
+            // this.init();
         }
     }
 </script>
@@ -113,7 +134,7 @@
         /*font-size: 30px;*/
         text-align: center;
         overflow: hidden;
-        margin-bottom: 8vmin;
+        margin-bottom: 5vmin;
 
         img {
             width: 100%;
