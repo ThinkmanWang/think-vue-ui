@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <mt-header id="app-header" v-bind:title="selected">
+    <mt-header id="app-header" v-bind:title="selected" fixed="true">
       <router-link to="/" slot="left">
         <mt-button icon="back"></mt-button>
         <mt-button >关闭</mt-button>
@@ -95,14 +95,15 @@ export default {
 
 <style>
 #app-header {
-  /*height: 48px;*/
+  height: 48px;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /*text-align: center;*/
   color: #2c3e50;
+  padding-top: 48px;
   /*margin-top: 60px;*/
 }
 </style>

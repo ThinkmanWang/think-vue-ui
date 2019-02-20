@@ -110,7 +110,7 @@
 .AdDialog {
     /*width: 300px;*/
     /*margin-top: 100px;*/
-
+    text-align: center;
     .slider {
         width: 50vmin;
         height: 50vmin;
