@@ -9,9 +9,9 @@
         <div>
             <mt-cell
                     title="链接"
-                    :to="link"
                     is-link
-                    value="百度一下">
+                    value="百度一下"
+                    @click.native="gotoBaidu">
             </mt-cell>
             <!-- 列表使用 -->
             <mt-cell title="标题" label="描述信息" is-link></mt-cell>
@@ -42,7 +42,13 @@
             }
         }
         , methods: {
-            doLogin() {
+            gotoBaidu() {
+                console.log("Open Baidu");
+                // location.href = 'http://www.baidu.com';
+                window.open('http://www.baidu.com');
+                // this.$router.push({ path: 'http://www.baidu.com'})
+            }
+            , doLogin() {
                 console.log("FXXK doLogin");
                 this.$router.push({ path: '/login', query: { item: "item"} })
             }
