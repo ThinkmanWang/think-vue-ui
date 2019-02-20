@@ -48,6 +48,8 @@ import IndexPage from "@/components/index/index";
 import DiscoverPage from "@/components/discover/discover";
 import MinePage from "@/components/mine/mine";
 
+import thinkutils from "@/lib/thinkutils/thinkutils"
+
 export default {
   name: 'app'
   , data() {
@@ -59,13 +61,17 @@ export default {
     MinePage,
     DiscoverPage,
     IndexPage,
-    AdPopup
+    AdPopup,
     // HelloWorld
   }
   , methods: {
 
   }
   , mounted() {
+    console.log(thinkutils.func1());
+    console.log(thinkutils.func2());
+    console.log(thinkutils.DateUtils.func3());
+    console.log(thinkutils.DateUtils.today());
 
     var aryData = [
       {
