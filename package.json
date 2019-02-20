@@ -17,6 +17,7 @@
     "v-dialogs": "^2.0.2",
     "vue": "^2.6.6",
     "vue-loader": "^15.6.3",
+    "vue-router": "^3.0.2",
     "vue-template-compiler": "^2.6.6",
     "webpack": "^4.29.5"
   },
