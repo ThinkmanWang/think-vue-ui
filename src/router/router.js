@@ -18,11 +18,19 @@ export default new Router({
             path: '/main'
             , name: "main"
             , component: Main
+            , meta: {
+                keepAlive: true, //此组件不需要被缓存
+            }
+
         }
         , {
             path: '/login'
             , name: "login"
             , component: Login
+            , meta: {
+                keepAlive: false, //此组件不需要被缓存
+            }
+
         }
     ]
 })

@@ -8,16 +8,16 @@
         </div>
         <div>
             <mt-cell
-                    title="标题文字"
+                    title="链接"
                     :to="link"
                     is-link
-                    value="带链接">
+                    value="百度一下">
             </mt-cell>
             <!-- 列表使用 -->
             <mt-cell title="标题" label="描述信息" is-link></mt-cell>
             <!-- 列表使用 -->
-            <mt-cell title="标题" is-link>
-                <span>信息</span>
+            <mt-cell title="登录" is-link @click.native="doLogin">
+                <span>登录</span>
                 <img slot="icon" src="./img/default-avatar-black-64.png" width="24" height="24">
             </mt-cell>
             <mt-cell title="标题" label="描述信息" is-link></mt-cell>
@@ -38,6 +38,13 @@
         , data () {
             return {
                 link:'https://baidu.com'
+                , loginPage: "/login"
+            }
+        }
+        , methods: {
+            doLogin() {
+                console.log("FXXK doLogin");
+                this.$router.push({ path: '/login', query: { item: "item"} })
             }
         }
     }
