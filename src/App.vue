@@ -42,7 +42,6 @@
 </template>
 
 <script>
-import {EventBus} from "@/event-bus";
 import AdPopup from "@/components/popup/ad-popup";
 import IndexPage from "@/components/index/index";
 import DiscoverPage from "@/components/discover/discover";
