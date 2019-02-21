@@ -44,8 +44,9 @@
         , methods: {
             gotoBaidu() {
                 console.log("Open Baidu");
+                this.$router.push({ path: '/search', query: { item: "item"} })
                 // location.href = 'http://www.baidu.com';
-                window.open('http://www.baidu.com');
+                // window.open('http://www.baidu.com');
                 // this.$router.push({ path: 'http://www.baidu.com'})
             }
             , doLogin() {
