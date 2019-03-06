@@ -29,7 +29,7 @@ export default new Router({
             , name: "login"
             , component: Login
             , meta: {
-                keepAlive: false, //此组件不需要被缓存
+                keepAlive: true, //此组件不需要被缓存
             }
 
         }
@@ -38,7 +38,7 @@ export default new Router({
             , name: "search"
             , component: Search
             , meta: {
-                keepAlive: false, //此组件不需要被缓存
+                keepAlive: true, //此组件不需要被缓存
             }
 
         }
